@@ -1,0 +1,14 @@
+@use "../sass/variable" as v;
+.Close {
+  width: 1.5rem;
+  height: 1.5rem;
+  &:hover {
+    color: v.$primary;
+  }
+  &:active {
+    color: v.$secondary;
+  }
+  &:focus {
+    outline: none;
+  }
+}

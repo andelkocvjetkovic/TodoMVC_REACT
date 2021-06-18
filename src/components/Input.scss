@@ -1,0 +1,23 @@
+@use "../sass/global";
+@use "../sass/variable" as v;
+
+.Input {
+  &__input {
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+    &:focus::placeholder {
+      opacity: 0.5;
+    }
+    &::placeholder {
+      font-weight: 300;
+      color: v.$placeholder;
+    }
+  }
+  &__label {
+    @extend %sr-only;
+  }
+}

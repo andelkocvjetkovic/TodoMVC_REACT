@@ -1,0 +1,9 @@
+.NewTodo {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+  & > :last-child {
+    align-self: flex-end;
+  }
+}
