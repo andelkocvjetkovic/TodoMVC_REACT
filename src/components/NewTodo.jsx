@@ -1,8 +1,8 @@
 import "./NewTodo.scss";
-import Checkbox from "./Checkbox";
 import Input from "./Input";
 
 import { nanoid } from "nanoid";
+import Uregent from "./Uregent";
 
 function TodoInput({ addTodos }) {
   function handleAddNew(e) {
@@ -28,7 +28,7 @@ function TodoInput({ addTodos }) {
   return (
     <form onSubmit={handleAddNew} className="NewTodo">
       <Input />
-      <Checkbox />
+      <Uregent id="todo-input" />
     </form>
   );
 }

@@ -6,6 +6,12 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   border-radius: 0.4rem;
 
+  @media screen and (min-width: 640px) {
+    max-width: 32rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+
   &__title {
     font-weight: 100;
     font-size: 6.2rem;
@@ -16,10 +22,14 @@
   &__main {
     display: flex;
     flex-direction: column;
-
   }
   &__footer {
+    padding: 1rem;
     border-top: 1px solid #e6e6e6;
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
     &::before {
       content: "";
       position: absolute;

@@ -1,0 +1,10 @@
+{
+  "useTabs": false,
+  "trailingComma": "es5",
+  "htmlWhitespaceSensitivity": "css",
+  "semi": true,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "printWidth": 80
+}

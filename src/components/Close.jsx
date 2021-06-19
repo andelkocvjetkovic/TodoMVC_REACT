@@ -1,7 +1,7 @@
 import "./Close.scss";
-function Close() {
+function Close({ onClick = () => {}, className = "" }) {
   return (
-    <button className="Close">
+    <button className={`Close ${className}`.trim()} onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

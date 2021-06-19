@@ -1,0 +1,30 @@
+@use "../sass/variable" as v;
+.RadioState {
+  position: relative;
+  font-size: 0.9rem;
+
+  transition: color, background-color 0.1s ease-out;
+  &__input {
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    &:checked + label {
+      background-color: v.$primary;
+      color: #fff;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    width: 100%;
+    height: 100%;
+    &:hover {
+      background-color: v.$secondary;
+      color: #fff;
+    }
+  }
+}

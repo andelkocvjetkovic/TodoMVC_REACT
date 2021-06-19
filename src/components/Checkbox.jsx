@@ -1,19 +1,25 @@
+import PropTypes from "prop-types";
 import "./Checkbox.scss";
-function Checkbox({ isUrgent = false }) {
+function Checkbox({
+  defaultChecked = false,
+  id,
+  onChange = () => {},
+  className = "",
+  disabled = false,
+}) {
   return (
-    <p className="Checkbox" onClick={(e) => e.stopPropagation()}>
-      <label htmlFor="urgent" className="Checkbox__label">
-        Uregent
-      </label>
-      <input
-        type="checkbox"
-        name="urgent"
-        id="urgent"
-        defaultChecked={isUrgent}
-        className="Checkbox__checkbox"
-      />
-    </p>
+    <input
+      type="checkbox"
+      name="urgent"
+      id={id}
+      onChange={onChange}
+      defaultChecked={defaultChecked}
+      className={`Checkbox ${className}`.trim()}
+      disabled={disabled}
+    />
   );
 }
-
+Checkbox.propTypes = {
+  id: PropTypes.string.isRequired,
+};
 export default Checkbox;

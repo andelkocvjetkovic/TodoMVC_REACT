@@ -1,0 +1,13 @@
+@use "../sass/global";
+.Uregent {
+  display: flex;
+  align-items: center;
+  max-height: 2.5rem;
+
+  &__label {
+    order: 1;
+    margin-left: 0.4rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+}

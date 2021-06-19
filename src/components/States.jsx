@@ -1,11 +1,20 @@
-import StateButton from "./StateButton";
+import RadioState from "./RadioState";
 import "./States.scss";
-const STATES = ["All", "Active", "Completed", "Urgent"];
-function States() {
+
+function States({ activeState, setActiveState, allStates }) {
+  function handleChangeStatus(e) {
+    setActiveState(e.target.value);
+  }
   return (
-    <div className="States">
-      {STATES.map((state) => {
-        return <StateButton key={state}>{state}</StateButton>;
+    <div className="States" onChange={handleChangeStatus}>
+      {allStates.map((state) => {
+        return (
+          <RadioState
+            key={state}
+            value={state}
+            checked={state == activeState}
+          ></RadioState>
+        );
       })}
     </div>
   );
